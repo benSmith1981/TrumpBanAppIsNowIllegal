@@ -11,10 +11,13 @@ import MapleBacon
 import Alamofire
 import MBProgressHUD
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var resultMeme: UIImageView!
     @IBOutlet var ownView: UIView!
+    @IBOutlet weak var creditsLabelOutlet: UILabel!
+    @IBOutlet weak var illegalizeButton: UIButton!
+    @IBOutlet weak var titleLabelOutlet: UILabel!
     
     var loadingNotification: MBProgressHUD?
     
@@ -28,6 +31,35 @@ class ViewController: UIViewController {
         
         let trimToIdx = min(text.characters.count, 10)
         return text.substring(to: text.index(text.startIndex, offsetBy: trimToIdx))
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textBox.font = UIFont(name: "Trumpit", size: 32)!
+        titleLabelOutlet.font = UIFont(name: "Trumpit", size: 32)!
+        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 32)!
+//         [NSFontAttributeName: UIFont(name: "SFShaiFontai-Bold", size: 32)!,
+//         NSForegroundColorAttributeName : UIColor.white]
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func dismisskey(_ sender: Any) {
+        view.endEditing(true)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -99,18 +131,6 @@ class ViewController: UIViewController {
     func hideLoadingNotification() {
         self.loadingNotification?.hide(animated: true)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 // Inspired by http://stackoverflow.com/a/27269242

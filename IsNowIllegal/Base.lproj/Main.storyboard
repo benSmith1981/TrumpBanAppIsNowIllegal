@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,6 +26,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zd4-S8-LX7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's going to be illegal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Po-IaP">
                                 <rect key="frame" x="47" y="53" width="281" height="29"/>
@@ -72,14 +74,25 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Msk-2U-jxu" secondAttribute="trailing" constant="50" id="ojL-KA-Doc"/>
                             <constraint firstItem="ztm-PB-Qdo" firstAttribute="centerX" secondItem="enU-bR-lHQ" secondAttribute="centerX" id="zrX-fS-lj8"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vfg-pB-hDT" appends="YES" id="bSE-fO-AAm"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="creditsLabelOutlet" destination="Msk-2U-jxu" id="eVr-gv-Jcx"/>
+                        <outlet property="illegalizeButton" destination="enU-bR-lHQ" id="3tr-4s-1iy"/>
                         <outlet property="ownView" destination="8bC-Xf-vdC" id="Hg8-MU-qxo"/>
                         <outlet property="resultMeme" destination="ztm-PB-Qdo" id="eC5-jt-Q9h"/>
                         <outlet property="textBox" destination="Olc-qV-4nq" id="h2i-P3-YtI"/>
+                        <outlet property="titleLabelOutlet" destination="n4o-Po-IaP" id="XKr-Bo-Rga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vfg-pB-hDT">
+                    <connections>
+                        <action selector="dismisskey:" destination="BYZ-38-t0r" id="9FV-Ux-dgu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
         </scene>
