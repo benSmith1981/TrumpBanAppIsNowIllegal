@@ -21,64 +21,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-qV-4nq">
-                                <rect key="frame" x="116" y="102" width="143" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zd4-S8-LX7"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's going to be illegal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Po-IaP">
-                                <rect key="frame" x="47" y="53" width="281" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enU-bR-lHQ">
-                                <rect key="frame" x="116" y="152" width="143" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="ILLEGALIZE!"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzo-0e-Z0q"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits for the service: http://isnowillegal.com/" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-2U-jxu">
-                                <rect key="frame" x="66" y="574" width="243" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-PB-Qdo">
-                                <rect key="frame" x="56.5" y="269" width="262" height="264"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="264" id="CuM-0s-uvm"/>
-                                    <constraint firstAttribute="width" constant="262" id="JQl-72-iPn"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black-and-white-cartoon-donald-duck-spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-P6-UBB">
+                                <rect key="frame" x="150" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-fh-Hmk">
+                                <rect key="frame" x="16" y="50" width="338" height="515"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="What's going to be illegal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Po-IaP">
+                                        <rect key="frame" x="23" y="0.0" width="292" height="30.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-qV-4nq">
+                                        <rect key="frame" x="69" y="40.5" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="liE-DA-hVu"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zd4-S8-LX7"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enU-bR-lHQ">
+                                        <rect key="frame" x="97.5" y="80.5" width="143" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="ILLEGALIZE!"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzo-0e-Z0q"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-PB-Qdo">
+                                        <rect key="frame" x="38" y="134.5" width="262" height="293"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits for the service: http://isnowillegal.com/" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-2U-jxu">
+                                        <rect key="frame" x="0.0" y="437.5" width="338" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-aU-bMS">
+                                        <rect key="frame" x="130.5" y="467" width="77" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <action selector="shareFestival:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-rN-FL9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ztm-PB-Qdo" firstAttribute="leading" secondItem="rCz-fh-Hmk" secondAttribute="leading" constant="38" id="CM3-fe-50o"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-bZ-mgW" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xRL-vA-045"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="n4o-Po-IaP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ic-yz-hVI"/>
-                            <constraint firstItem="Olc-qV-4nq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="7ln-Yp-utB"/>
-                            <constraint firstItem="Olc-qV-4nq" firstAttribute="centerX" secondItem="n4o-Po-IaP" secondAttribute="centerX" id="9Cy-wJ-Tia"/>
-                            <constraint firstItem="ztm-PB-Qdo" firstAttribute="top" secondItem="enU-bR-lHQ" secondAttribute="bottom" constant="73" id="9tS-Xv-lgH"/>
-                            <constraint firstItem="enU-bR-lHQ" firstAttribute="centerX" secondItem="n4o-Po-IaP" secondAttribute="centerX" id="Fka-i6-bee"/>
-                            <constraint firstItem="n4o-Po-IaP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="HAN-6A-bhg"/>
-                            <constraint firstItem="enU-bR-lHQ" firstAttribute="top" secondItem="Olc-qV-4nq" secondAttribute="bottom" constant="20" id="NS7-8c-uNe"/>
-                            <constraint firstItem="Msk-2U-jxu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="SUZ-nj-yQJ"/>
-                            <constraint firstItem="Olc-qV-4nq" firstAttribute="top" secondItem="n4o-Po-IaP" secondAttribute="bottom" constant="20" id="YAy-74-pYe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Olc-qV-4nq" secondAttribute="trailing" constant="100" id="a9y-e7-dR7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Msk-2U-jxu" secondAttribute="bottom" constant="45" id="aND-bp-zbz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Msk-2U-jxu" secondAttribute="trailing" constant="50" id="ojL-KA-Doc"/>
-                            <constraint firstItem="ztm-PB-Qdo" firstAttribute="centerX" secondItem="enU-bR-lHQ" secondAttribute="centerX" id="zrX-fS-lj8"/>
+                            <constraint firstItem="rCz-fh-Hmk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="6Mu-Ui-P7I"/>
+                            <constraint firstAttribute="trailing" secondItem="PSz-bZ-mgW" secondAttribute="trailing" id="KMt-vy-b59"/>
+                            <constraint firstItem="rCz-fh-Hmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RwB-da-oSa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rCz-fh-Hmk" secondAttribute="trailing" constant="5" id="UDM-h7-OfR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PSz-bZ-mgW" secondAttribute="bottom" id="cfz-pg-1a2"/>
+                            <constraint firstItem="PSz-bZ-mgW" firstAttribute="top" secondItem="rCz-fh-Hmk" secondAttribute="bottom" constant="52" id="rzZ-lP-hnp"/>
+                            <constraint firstItem="PSz-bZ-mgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="unf-Ky-aY8"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="vfg-pB-hDT" appends="YES" id="bSE-fO-AAm"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="adBannerView" destination="PSz-bZ-mgW" id="C6X-sp-DzO"/>
                         <outlet property="creditsLabelOutlet" destination="Msk-2U-jxu" id="eVr-gv-Jcx"/>
                         <outlet property="illegalizeButton" destination="enU-bR-lHQ" id="3tr-4s-1iy"/>
                         <outlet property="ownView" destination="8bC-Xf-vdC" id="Hg8-MU-qxo"/>
@@ -97,4 +118,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="black-and-white-cartoon-donald-duck-spotlight" width="640" height="422"/>
+    </resources>
 </document>

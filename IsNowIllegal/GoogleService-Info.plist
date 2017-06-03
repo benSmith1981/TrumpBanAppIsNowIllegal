@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>982593116071-04a1p0jjh8r6mr5a6vl6onnja6sdv3q5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.982593116071-04a1p0jjh8r6mr5a6vl6onnja6sdv3q5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDOEa6ssiD1ZZMEsHbvuNY6UN1m6ZRwmgA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>982593116071</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.BenSmithInc.TrumpBanApp</string>
+	<key>PROJECT_ID</key>
+	<string>isnowillegal-e13f0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>isnowillegal-e13f0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:982593116071:ios:09fb2ded1588b4c7</string>
+	<key>DATABASE_URL</key>
+	<string>https://isnowillegal-e13f0.firebaseio.com</string>
+</dict>
+</plist>

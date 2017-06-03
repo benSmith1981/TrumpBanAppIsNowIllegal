@@ -18,6 +18,10 @@
 		6C6FDF981E49BED7003A295E /* IsNowIllegalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FDF971E49BED7003A295E /* IsNowIllegalTests.swift */; };
 		6C6FDFA31E49BED7003A295E /* IsNowIllegalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FDFA21E49BED7003A295E /* IsNowIllegalUITests.swift */; };
 		A1E3155788872EDE322AA182 /* Pods_IsNowIllegalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */; };
+		BE408D291EE224A5003D047E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE408D271EE224A5003D047E /* StartViewController.swift */; };
+		BE408D2A1EE224A5003D047E /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE408D281EE224A5003D047E /* Start.storyboard */; };
+		BE408D2C1EE2B274003D047E /* IsNowIllegalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE408D2B1EE2B274003D047E /* IsNowIllegalDataService.swift */; };
+		BE408D2E1EE2B724003D047E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE408D2D1EE2B724003D047E /* GoogleService-Info.plist */; };
 		BE43E96D1EE1A4DE002E2C5A /* Trumpit.otf in Resources */ = {isa = PBXBuildFile; fileRef = BE43E96C1EE1A4DE002E2C5A /* Trumpit.otf */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		747E904DFBC06F60740A18D9 /* Pods-IsNowIllegalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IsNowIllegalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F861C9D2D1E5F2AFF55B4 /* Pods-IsNowIllegalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE408D271EE224A5003D047E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BE408D281EE224A5003D047E /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		BE408D2B1EE2B274003D047E /* IsNowIllegalDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsNowIllegalDataService.swift; sourceTree = "<group>"; };
+		BE408D2D1EE2B724003D047E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE43E96C1EE1A4DE002E2C5A /* Trumpit.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Trumpit.otf; path = ../Trumpit.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,11 +139,15 @@
 				BE43E96C1EE1A4DE002E2C5A /* Trumpit.otf */,
 				6C6FDF821E49BED7003A295E /* AppDelegate.swift */,
 				6C6FDF841E49BED7003A295E /* ViewController.swift */,
+				BE408D2B1EE2B274003D047E /* IsNowIllegalDataService.swift */,
 				6C61FFE41E4B2B9700A7B2FD /* IllegalGif.swift */,
 				6C6FDF861E49BED7003A295E /* Main.storyboard */,
 				6C6FDF891E49BED7003A295E /* Assets.xcassets */,
 				6C6FDF8B1E49BED7003A295E /* LaunchScreen.storyboard */,
+				BE408D271EE224A5003D047E /* StartViewController.swift */,
+				BE408D281EE224A5003D047E /* Start.storyboard */,
 				6C6FDF8E1E49BED7003A295E /* Info.plist */,
+				BE408D2D1EE2B724003D047E /* GoogleService-Info.plist */,
 			);
 			path = IsNowIllegal;
 			sourceTree = "<group>";
@@ -292,7 +304,9 @@
 			files = (
 				6C6FDF8D1E49BED7003A295E /* LaunchScreen.storyboard in Resources */,
 				6C6FDF8A1E49BED7003A295E /* Assets.xcassets in Resources */,
+				BE408D2A1EE224A5003D047E /* Start.storyboard in Resources */,
 				6C6FDF881E49BED7003A295E /* Main.storyboard in Resources */,
+				BE408D2E1EE2B724003D047E /* GoogleService-Info.plist in Resources */,
 				BE43E96D1EE1A4DE002E2C5A /* Trumpit.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6825C1C19A3EA93DF941ABD1 /* [CP] Embed Pods Frameworks */ = {
@@ -386,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7AAFD4B793BA50A1E677A501 /* [CP] Copy Pods Resources */ = {
@@ -446,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,8 +471,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C61FFE51E4B2B9700A7B2FD /* IllegalGif.swift in Sources */,
+				BE408D291EE224A5003D047E /* StartViewController.swift in Sources */,
 				6C6FDF851E49BED7003A295E /* ViewController.swift in Sources */,
 				6C6FDF831E49BED7003A295E /* AppDelegate.swift in Sources */,
+				BE408D2C1EE2B274003D047E /* IsNowIllegalDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,14 +627,14 @@
 			baseConfigurationReference = 04E3B045E296B58A509CF450 /* Pods-IsNowIllegal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CWK29L7ZPT;
 				INFOPLIST_FILE = IsNowIllegal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MyWonderfulApps.IsNowIllegal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenSmithInc.TrumpBanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb484771-ea5b-4646-a64f-b1418ed1343e";
-				PROVISIONING_PROFILE_SPECIFIER = isnowillegal;
+				PROVISIONING_PROFILE = "df8e586f-c09f-4286-989a-c826b6100b90";
+				PROVISIONING_PROFILE_SPECIFIER = "Trump Ban App - Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -628,14 +644,15 @@
 			baseConfigurationReference = 40787C051D28A50530A3CA69 /* Pods-IsNowIllegal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = CWK29L7ZPT;
 				INFOPLIST_FILE = IsNowIllegal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MyWonderfulApps.IsNowIllegal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenSmithInc.TrumpBanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb484771-ea5b-4646-a64f-b1418ed1343e";
-				PROVISIONING_PROFILE_SPECIFIER = isnowillegal;
+				PROVISIONING_PROFILE = "ecad2477-f49d-48e7-bf49-b5726f33b418";
+				PROVISIONING_PROFILE_SPECIFIER = "Trump Ban App - Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

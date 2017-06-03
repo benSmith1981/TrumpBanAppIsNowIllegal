@@ -9,7 +9,8 @@ target 'IsNowIllegal' do
   pod 'MapleBacon'
   pod 'Alamofire', '~> 4.3'
   pod 'MBProgressHUD', '~> 1.0.0'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
   target 'IsNowIllegalTests' do
     inherit! :search_paths
     # Pods for testing

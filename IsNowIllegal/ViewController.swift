@@ -2,25 +2,28 @@
 //  ViewController.swift
 //  IsNowIllegal
 //
-//  Created by Maya Lekova on 2/7/17.
-//  Copyright © 2017 Maya Lekova. All rights reserved.
+//  Created by Ben Smith on 29/05/2017.
+//  Copyright © 2017 Ben Smith. All rights reserved.
 //
+
 
 import UIKit
 import MapleBacon
 import Alamofire
 import MBProgressHUD
+import Firebase
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var resultMeme: UIImageView!
     @IBOutlet var ownView: UIView!
     @IBOutlet weak var creditsLabelOutlet: UILabel!
     @IBOutlet weak var illegalizeButton: UIButton!
     @IBOutlet weak var titleLabelOutlet: UILabel!
-    
+    var gifObj: IllegalGif?
     var loadingNotification: MBProgressHUD?
-    
+    @IBOutlet weak var adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+
     var enteredText: String? {
         guard let text = self.textBox.text?.uppercased() else {
             return nil
@@ -35,12 +38,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textBox.font = UIFont(name: "Trumpit", size: 32)!
-        titleLabelOutlet.font = UIFont(name: "Trumpit", size: 32)!
-        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 32)!
-//         [NSFontAttributeName: UIFont(name: "SFShaiFontai-Bold", size: 32)!,
-//         NSForegroundColorAttributeName : UIColor.white]
-        
+        adBannerView?.delegate = self
+        adBannerView?.adUnitID = "ca-app-pub-0852965901868072"
+        adBannerView?.rootViewController = self
+        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
+        adBannerView?.load(request)
+
+        textBox.font = UIFont(name: "Trumpit", size: 25)!
+        titleLabelOutlet.font = UIFont(name: "Trumpit", size: 24)!
+        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 24)!
+        creditsLabelOutlet.font = UIFont(name: "Trumpit", size: 24)!
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -63,6 +71,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
+        view.endEditing(true)
+
         guard let enteredText = self.enteredText else {
             return
         }
@@ -115,6 +125,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let jsonObj = JSON.parseJSONString,
                 let gifData = jsonObj as? NSDictionary,
                 let gifObj = IllegalGif(dictionary: gifData) {
+                self.gifObj = gifObj
                 return callback(gifObj.url ?? "")
             } else {
                 return callback("")
@@ -122,6 +133,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    @IBAction func shareFestival(_ sender: UIButton) {
+        guard let url = URL(string: (self.gifObj?.url)!) else {
+            return
+        }
+        do {
+
+            if let title: String = self.enteredText {
+                let text = "\(title) is now illegal!"
+                let shareData: NSData = try NSData(contentsOf: url)
+                
+                let activityViewController = UIActivityViewController(activityItems: [(shareData), text], applicationActivities: nil)
+                self.present(activityViewController, animated: true)
+            }
+        } catch {
+            
+        }
+
+    }
+    
     func showLoadingNotification() {
         self.loadingNotification = MBProgressHUD.showAdded(to: self.ownView, animated: true)
         loadingNotification?.mode = MBProgressHUDMode.indeterminate
@@ -130,6 +160,39 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func hideLoadingNotification() {
         self.loadingNotification?.hide(animated: true)
+    }
+    
+    // MARK: - GADBannerViewDelegate
+    // Called when an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called when an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(#function): \(error.localizedDescription)")
+    }
+    
+    // Called just before presenting the user a full screen view, such as a browser, in response to
+    // clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just before dismissing a full screen view.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just after dismissing a full screen view.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just before the application will background or terminate because the user clicked on an
+    // ad that will launch another application (such as the App Store).
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print(#function)
     }
 }
 

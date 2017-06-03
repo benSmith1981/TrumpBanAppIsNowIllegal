@@ -2,9 +2,10 @@
 //  IsNowIllegalTests.swift
 //  IsNowIllegalTests
 //
-//  Created by Maya Lekova on 2/7/17.
-//  Copyright © 2017 Maya Lekova. All rights reserved.
+//  Created by Ben Smith on 29/05/2017.
+//  Copyright © 2017 Ben Smith. All rights reserved.
 //
+
 
 import XCTest
 @testable import IsNowIllegal

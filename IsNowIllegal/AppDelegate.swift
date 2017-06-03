@@ -2,11 +2,13 @@
 //  AppDelegate.swift
 //  IsNowIllegal
 //
-//  Created by Maya Lekova on 2/7/17.
-//  Copyright © 2017 Maya Lekova. All rights reserved.
+//  Created by Ben Smith on 29/05/2017.
+//  Copyright © 2017 Ben Smith. All rights reserved.
 //
 
+
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Use Firebase library to configure APIs.
+        FirebaseApp.configure()
+        
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-0852965901868072~5019954377")
         return true
     }
 
