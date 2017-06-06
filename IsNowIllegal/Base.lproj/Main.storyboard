@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,17 +25,17 @@
                                 <rect key="frame" x="150" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-fh-Hmk">
-                                <rect key="frame" x="16" y="50" width="338" height="515"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-fh-Hmk">
+                                <rect key="frame" x="16" y="50" width="338" height="517"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="What's going to be illegal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Po-IaP">
-                                        <rect key="frame" x="23" y="0.0" width="292" height="30.5"/>
+                                        <rect key="frame" x="23" y="0.0" width="292" height="82"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-qV-4nq">
-                                        <rect key="frame" x="69" y="40.5" width="200" height="30"/>
+                                        <rect key="frame" x="69" y="87" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="liE-DA-hVu"/>
                                         </constraints>
@@ -47,26 +47,24 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enU-bR-lHQ">
-                                        <rect key="frame" x="97.5" y="80.5" width="143" height="44"/>
+                                        <rect key="frame" x="97.5" y="122" width="143" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="ILLEGALIZE!"/>
                                         <connections>
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzo-0e-Z0q"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-PB-Qdo">
-                                        <rect key="frame" x="38" y="134.5" width="262" height="293"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-PB-Qdo">
+                                        <rect key="frame" x="38" y="171" width="262" height="293"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits for the service: http://isnowillegal.com/" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-2U-jxu">
-                                        <rect key="frame" x="0.0" y="437.5" width="338" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-aU-bMS">
-                                        <rect key="frame" x="130.5" y="467" width="77" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Share"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-aU-bMS">
+                                        <rect key="frame" x="145" y="469" width="48" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="H3n-2Q-ZkX"/>
+                                            <constraint firstAttribute="width" constant="48" id="r5R-po-ioc"/>
+                                        </constraints>
+                                        <state key="normal" image="share"/>
                                         <connections>
                                             <action selector="shareFestival:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-rN-FL9"/>
                                         </connections>
@@ -83,6 +81,13 @@
                                     <constraint firstAttribute="height" constant="50" id="xRL-vA-045"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits for the service: http://isnowillegal.com/" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-hs-7ae">
+                                <rect key="frame" x="34" y="575" width="341" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -91,7 +96,7 @@
                             <constraint firstItem="rCz-fh-Hmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RwB-da-oSa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rCz-fh-Hmk" secondAttribute="trailing" constant="5" id="UDM-h7-OfR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PSz-bZ-mgW" secondAttribute="bottom" id="cfz-pg-1a2"/>
-                            <constraint firstItem="PSz-bZ-mgW" firstAttribute="top" secondItem="rCz-fh-Hmk" secondAttribute="bottom" constant="52" id="rzZ-lP-hnp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCz-fh-Hmk" secondAttribute="bottom" constant="100" id="rn1-FH-u5h"/>
                             <constraint firstItem="PSz-bZ-mgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="unf-Ky-aY8"/>
                         </constraints>
                         <connections>
@@ -100,10 +105,10 @@
                     </view>
                     <connections>
                         <outlet property="adBannerView" destination="PSz-bZ-mgW" id="C6X-sp-DzO"/>
-                        <outlet property="creditsLabelOutlet" destination="Msk-2U-jxu" id="eVr-gv-Jcx"/>
                         <outlet property="illegalizeButton" destination="enU-bR-lHQ" id="3tr-4s-1iy"/>
                         <outlet property="ownView" destination="8bC-Xf-vdC" id="Hg8-MU-qxo"/>
                         <outlet property="resultMeme" destination="ztm-PB-Qdo" id="eC5-jt-Q9h"/>
+                        <outlet property="shareButtonOutlet" destination="cM2-aU-bMS" id="QNo-N4-561"/>
                         <outlet property="textBox" destination="Olc-qV-4nq" id="h2i-P3-YtI"/>
                         <outlet property="titleLabelOutlet" destination="n4o-Po-IaP" id="XKr-Bo-Rga"/>
                     </connections>
@@ -120,5 +125,6 @@
     </scenes>
     <resources>
         <image name="black-and-white-cartoon-donald-duck-spotlight" width="640" height="422"/>
+        <image name="share" width="256" height="256"/>
     </resources>
 </document>

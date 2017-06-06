@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     @IBOutlet weak var creditsLabelOutlet: UILabel!
     @IBOutlet weak var illegalizeButton: UIButton!
     @IBOutlet weak var titleLabelOutlet: UILabel!
+    @IBOutlet weak var shareButtonOutlet: UIButton!
     var gifObj: IllegalGif?
     var loadingNotification: MBProgressHUD?
     @IBOutlet weak var adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
@@ -39,16 +40,25 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         adBannerView?.delegate = self
-        adBannerView?.adUnitID = "ca-app-pub-0852965901868072"
+        adBannerView?.adUnitID = "ca-app-pub-0852965901868072/6496687572"
         adBannerView?.rootViewController = self
         let request = GADRequest()
 //        request.testDevices = [kGADSimulatorID]
         adBannerView?.load(request)
 
-        textBox.font = UIFont(name: "Trumpit", size: 25)!
-        titleLabelOutlet.font = UIFont(name: "Trumpit", size: 24)!
-        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 24)!
-        creditsLabelOutlet.font = UIFont(name: "Trumpit", size: 24)!
+        textBox.font = UIFont(name: "Trumpit", size: 20)!
+        titleLabelOutlet.font = UIFont(name: "Trumpit", size: 20)!
+        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 20)!
+        creditsLabelOutlet.font = UIFont(name: "Trumpit", size: 15)!
+        
+        shareButtonOutlet.layer.masksToBounds = true
+        shareButtonOutlet.clipsToBounds = true
+        shareButtonOutlet.layer.cornerRadius = 5
+        
+        resultMeme.layer.masksToBounds = true
+        resultMeme.clipsToBounds = true
+        resultMeme.layer.cornerRadius = 5
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -104,6 +114,7 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
                     }
                     
                     self.resultMeme.setImage(withUrl: url) { instance, error in
+//                        MapleBaconStorage.sharedStorage.store(image: (instance?.image)!, data: nil, forKey: "gifImage")
                         if let error = error {
                             print("ERROR while downloading image: \(error)")
                         }
@@ -137,18 +148,20 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
         guard let url = URL(string: (self.gifObj?.url)!) else {
             return
         }
-        do {
+//        do {
 
-            if let title: String = self.enteredText {
-                let text = "\(title) is now illegal!"
-                let shareData: NSData = try NSData(contentsOf: url)
-                
-                let activityViewController = UIActivityViewController(activityItems: [(shareData), text], applicationActivities: nil)
-                self.present(activityViewController, animated: true)
-            }
-        } catch {
+        if let title: String = self.enteredText {
+            let text = "\(title) is now illegal!"
+            //let shareData: NSData = try NSData(contentsOf: url)
             
+            let activityViewController = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: { 
+                print("Finished")
+            })
         }
+//        } catch {
+//            print(error)
+//        }
 
     }
     

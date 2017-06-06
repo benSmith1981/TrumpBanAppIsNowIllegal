@@ -1,0 +1,61 @@
+# More documentation about how to customize your build
+# can be found here:
+# https://docs.fastlane.tools
+fastlane_version "1.109.0"
+
+# This value helps us track success metrics for Fastfiles
+# we automatically generate. Feel free to remove this line
+# once you get things running smoothly!
+generated_fastfile_id "2b1f38dc-4f72-45d8-b365-6b904b769cb8"
+
+default_platform :ios
+
+# Fastfile actions accept additional configuration, but
+# don't worry, fastlane will prompt you for required
+# info which you can add here later
+platform :ios do
+  
+  desc "Provision, take screenshots, build and upload to App Store"
+  lane :do_everything do
+    provision
+    screenshot
+    build
+    upload
+  end
+  
+  desc "Take screenshots"
+  lane :screenshot do
+    snapshot(scheme: "IsNowIllegal") 
+  end
+  
+  desc "Deploy a new version to the App Store"
+  lane :provision do
+    produce(
+      app_name: 'IsNowIllegal',
+      language: 'English',
+      app_version: '1.0',
+      sku: '111a'
+    )
+    # cert to create a new private key and signing request, download and install the generated certificate and import all generated files in your keychain.
+    cert
+    # generate a provisioning profile. By specifying force: true, a new provisioning profile is created on each run; this ensures you’re always using the correct code signing certificate.
+    sigh(force: true)
+  end
+  
+  desc "Upload to App Store"
+  lane :upload do
+    deliver(force: true)
+  end
+  
+  desc "Create ipa"
+  lane :build do
+    increment_build_number
+    gym(scheme: "IsNowIllegal") # Build your app - more options available
+
+  end
+  
+  error do |lane, exception|
+  # This block is called if there was an error running a lane.
+  end
+  
+end

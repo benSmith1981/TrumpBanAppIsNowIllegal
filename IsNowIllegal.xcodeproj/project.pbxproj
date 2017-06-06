@@ -17,6 +17,8 @@
 		6C6FDF8D1E49BED7003A295E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6FDF8B1E49BED7003A295E /* LaunchScreen.storyboard */; };
 		6C6FDF981E49BED7003A295E /* IsNowIllegalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FDF971E49BED7003A295E /* IsNowIllegalTests.swift */; };
 		6C6FDFA31E49BED7003A295E /* IsNowIllegalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FDFA21E49BED7003A295E /* IsNowIllegalUITests.swift */; };
+		90B7D61A1EE76A540089406E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B7D6191EE76A540089406E /* share.png */; };
+		90B7D61C1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B7D61B1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png */; };
 		A1E3155788872EDE322AA182 /* Pods_IsNowIllegalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */; };
 		BE408D291EE224A5003D047E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE408D271EE224A5003D047E /* StartViewController.swift */; };
 		BE408D2A1EE224A5003D047E /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE408D281EE224A5003D047E /* Start.storyboard */; };
@@ -64,6 +66,8 @@
 		6C6FDFA21E49BED7003A295E /* IsNowIllegalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNowIllegalUITests.swift; sourceTree = "<group>"; };
 		6C6FDFA41E49BED7003A295E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747E904DFBC06F60740A18D9 /* Pods-IsNowIllegalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		90B7D6191EE76A540089406E /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = ../../../Downloads/share.png; sourceTree = "<group>"; };
+		90B7D61B1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "share_button2-57f7d54e3df78c690f643260.png"; path = "../../../Downloads/share_button2-57f7d54e3df78c690f643260.png"; sourceTree = "<group>"; };
 		AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IsNowIllegalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F861C9D2D1E5F2AFF55B4 /* Pods-IsNowIllegalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE408D271EE224A5003D047E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				6C61FFE41E4B2B9700A7B2FD /* IllegalGif.swift */,
 				6C6FDF861E49BED7003A295E /* Main.storyboard */,
 				6C6FDF891E49BED7003A295E /* Assets.xcassets */,
+				90B7D61B1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png */,
+				90B7D6191EE76A540089406E /* share.png */,
 				6C6FDF8B1E49BED7003A295E /* LaunchScreen.storyboard */,
 				BE408D271EE224A5003D047E /* StartViewController.swift */,
 				BE408D281EE224A5003D047E /* Start.storyboard */,
@@ -305,8 +311,10 @@
 				6C6FDF8D1E49BED7003A295E /* LaunchScreen.storyboard in Resources */,
 				6C6FDF8A1E49BED7003A295E /* Assets.xcassets in Resources */,
 				BE408D2A1EE224A5003D047E /* Start.storyboard in Resources */,
+				90B7D61A1EE76A540089406E /* share.png in Resources */,
 				6C6FDF881E49BED7003A295E /* Main.storyboard in Resources */,
 				BE408D2E1EE2B724003D047E /* GoogleService-Info.plist in Resources */,
+				90B7D61C1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png in Resources */,
 				BE43E96D1EE1A4DE002E2C5A /* Trumpit.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,7 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BenSmithInc.TrumpBanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ecad2477-f49d-48e7-bf49-b5726f33b418";
+				PROVISIONING_PROFILE = "0a0c0efe-c253-45b5-bac3-f299498615fc";
 				PROVISIONING_PROFILE_SPECIFIER = "Trump Ban App - Distribution";
 				SWIFT_VERSION = 3.0;
 			};
