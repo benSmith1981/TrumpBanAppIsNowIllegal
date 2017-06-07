@@ -35,6 +35,11 @@ xcode-select --install
 fastlane ios do_everything
 ```
 Provision, take screenshots, build and upload to App Store
+### ios screenshots_and_upload
+```
+fastlane ios screenshots_and_upload
+```
+
 ### ios build_and_upload
 ```
 fastlane ios build_and_upload

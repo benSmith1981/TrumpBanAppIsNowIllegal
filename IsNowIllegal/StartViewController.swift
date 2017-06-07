@@ -13,13 +13,12 @@ class StartViewController: UIViewController {
     @IBOutlet weak var illegalTItle: UIImageView!
     @IBOutlet weak var nowTextLabelOutlet: UILabel!
     @IBOutlet weak var isTextLabelOutlet: UILabel!
-    
     @IBOutlet weak var nowXConstraint: NSLayoutConstraint!
     @IBOutlet weak var isXConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         illegalTItle.alpha = 0
         nowTextLabelOutlet.alpha = 0
         nowTextLabelOutlet.font = UIFont(name: "Trumpit", size: 32)!

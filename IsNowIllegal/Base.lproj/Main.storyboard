@@ -22,23 +22,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black-and-white-cartoon-donald-duck-spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-P6-UBB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black-and-white-cartoon-donald-duck-spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-P6-UBB">
                                 <rect key="frame" x="150" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-fh-Hmk">
-                                <rect key="frame" x="16" y="50" width="338" height="517"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-bZ-mgW" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xRL-vA-045"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-fh-Hmk">
+                                <rect key="frame" x="16" y="59" width="338" height="550"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="What's going to be illegal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Po-IaP">
-                                        <rect key="frame" x="23" y="0.0" width="292" height="82"/>
+                                        <rect key="frame" x="23" y="0.0" width="292" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="DLG-fw-Nh5"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-qV-4nq">
-                                        <rect key="frame" x="69" y="87" width="200" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-qV-4nq">
+                                        <rect key="frame" x="69" y="92" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="liE-DA-hVu"/>
+                                            <constraint firstAttribute="height" constant="40" id="nxA-Im-sg0"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,57 +57,57 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zd4-S8-LX7"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enU-bR-lHQ">
-                                        <rect key="frame" x="97.5" y="122" width="143" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="ILLEGALIZE!"/>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzo-0e-Z0q"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ztm-PB-Qdo">
-                                        <rect key="frame" x="38" y="171" width="262" height="293"/>
+                                        <rect key="frame" x="38" y="164" width="262" height="304"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-aU-bMS">
-                                        <rect key="frame" x="145" y="469" width="48" height="48"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="xja-yN-VgK">
+                                        <rect key="frame" x="37.5" y="500" width="263" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="265" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enU-bR-lHQ">
+                                                <rect key="frame" x="0.0" y="3" width="155" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                                <state key="normal" title="ILLEGALIZE!"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vzo-0e-Z0q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-aU-bMS">
+                                                <rect key="frame" x="215" y="1" width="48" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="H3n-2Q-ZkX"/>
+                                                    <constraint firstAttribute="width" constant="48" id="r5R-po-ioc"/>
+                                                </constraints>
+                                                <state key="normal" image="share"/>
+                                                <connections>
+                                                    <action selector="shareFestival:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-rN-FL9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="H3n-2Q-ZkX"/>
-                                            <constraint firstAttribute="width" constant="48" id="r5R-po-ioc"/>
+                                            <constraint firstAttribute="height" constant="50" id="guS-m0-FRV"/>
                                         </constraints>
-                                        <state key="normal" image="share"/>
-                                        <connections>
-                                            <action selector="shareFestival:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfj-rN-FL9"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Olc-qV-4nq" firstAttribute="top" secondItem="n4o-Po-IaP" secondAttribute="bottom" constant="32" id="7uo-U7-bFv"/>
                                     <constraint firstItem="ztm-PB-Qdo" firstAttribute="leading" secondItem="rCz-fh-Hmk" secondAttribute="leading" constant="38" id="CM3-fe-50o"/>
+                                    <constraint firstAttribute="height" constant="550" id="tRn-It-Md0"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-bZ-mgW" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xRL-vA-045"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits for the service: http://isnowillegal.com/" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-hs-7ae">
-                                <rect key="frame" x="34" y="575" width="341" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rCz-fh-Hmk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="6Mu-Ui-P7I"/>
+                            <constraint firstItem="LMg-P6-UBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="2H9-v8-cFz"/>
+                            <constraint firstItem="LMg-P6-UBB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Oo-g6-BUf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LMg-P6-UBB" secondAttribute="bottom" id="91H-6C-m0X"/>
                             <constraint firstAttribute="trailing" secondItem="PSz-bZ-mgW" secondAttribute="trailing" id="KMt-vy-b59"/>
                             <constraint firstItem="rCz-fh-Hmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RwB-da-oSa"/>
+                            <constraint firstItem="rCz-fh-Hmk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="S7P-nX-FNY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rCz-fh-Hmk" secondAttribute="trailing" constant="5" id="UDM-h7-OfR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PSz-bZ-mgW" secondAttribute="bottom" id="cfz-pg-1a2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCz-fh-Hmk" secondAttribute="bottom" constant="100" id="rn1-FH-u5h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCz-fh-Hmk" secondAttribute="bottom" constant="58" id="rn1-FH-u5h"/>
+                            <constraint firstAttribute="trailing" secondItem="LMg-P6-UBB" secondAttribute="trailing" constant="-150" id="sTT-eR-P0V"/>
                             <constraint firstItem="PSz-bZ-mgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="unf-Ky-aY8"/>
                         </constraints>
                         <connections>
@@ -106,7 +116,6 @@
                     </view>
                     <connections>
                         <outlet property="adBannerView" destination="PSz-bZ-mgW" id="C6X-sp-DzO"/>
-                        <outlet property="creditsLabelOutlet" destination="NXJ-hs-7ae" id="exM-ff-xHg"/>
                         <outlet property="illegalizeButton" destination="enU-bR-lHQ" id="3tr-4s-1iy"/>
                         <outlet property="ownView" destination="8bC-Xf-vdC" id="Hg8-MU-qxo"/>
                         <outlet property="resultMeme" destination="ztm-PB-Qdo" id="eC5-jt-Q9h"/>

@@ -22,6 +22,11 @@ platform :ios do
     build
     upload
   end
+
+  lane :screenshots_and_upload do
+    screenshot
+    upload
+  end
   
   lane :build_and_upload do
     build
@@ -60,10 +65,10 @@ platform :ios do
   
   desc "Upload to App Store"
   lane :upload do
-    deliver(force: true),
-    username: "funkymonkey1981@hotmail.com",
-    app_identifier: "com.BenSmithInc.TrumpBanApp",
-	itc_team_name: "Ben Smith|98555035",
+    deliver(
+     force: true,
+     username: "funkymonkey1981@hotmail.com"
+     )
   end
   
   desc "Create ipa"

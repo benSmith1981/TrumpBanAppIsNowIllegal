@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var resultMeme: UIImageView!
     @IBOutlet var ownView: UIView!
-    @IBOutlet weak var creditsLabelOutlet: UILabel!
     @IBOutlet weak var illegalizeButton: UIButton!
     @IBOutlet weak var titleLabelOutlet: UILabel!
     @IBOutlet weak var shareButtonOutlet: UIButton!
@@ -43,13 +42,11 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
         adBannerView?.adUnitID = "ca-app-pub-0852965901868072/6496687572"
         adBannerView?.rootViewController = self
         let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
         adBannerView?.load(request)
 
         textBox.font = UIFont(name: "Trumpit", size: 20)!
         titleLabelOutlet.font = UIFont(name: "Trumpit", size: 20)!
         illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 20)!
-        creditsLabelOutlet.font = UIFont(name: "Trumpit", size: 15)!
         
         shareButtonOutlet.layer.masksToBounds = true
         shareButtonOutlet.clipsToBounds = true
@@ -69,6 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+        illegalise()
         return true
     }
     
@@ -82,19 +80,22 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         view.endEditing(true)
-
+        illegalise()
+    }
+    
+    func illegalise() {
         guard let enteredText = self.enteredText else {
             return
         }
-
+        
         let parameters: Parameters = [
             "task": "gif",
             "word": enteredText
         ]
         let url = "https://is-now-illegal.firebaseio.com/queue/tasks.json"
-
+        
         self.showLoadingNotification()
-
+        
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString {
             [unowned self] response in
             if let error = response.error {
@@ -114,7 +115,7 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
                     }
                     
                     self.resultMeme.setImage(withUrl: url) { instance, error in
-//                        MapleBaconStorage.sharedStorage.store(image: (instance?.image)!, data: nil, forKey: "gifImage")
+                        //                        MapleBaconStorage.sharedStorage.store(image: (instance?.image)!, data: nil, forKey: "gifImage")
                         if let error = error {
                             print("ERROR while downloading image: \(error)")
                         }
@@ -145,23 +146,17 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     }
 
     @IBAction func shareFestival(_ sender: UIButton) {
-        guard let url = URL(string: (self.gifObj?.url)!) else {
+        guard let url = NSURL(string: (self.gifObj?.url)!) else {
             return
         }
-//        do {
-
         if let title: String = self.enteredText {
             let text = "\(title) is now illegal!"
-            //let shareData: NSData = try NSData(contentsOf: url)
-            
+
             let activityViewController = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
             self.present(activityViewController, animated: true, completion: { 
                 print("Finished")
             })
         }
-//        } catch {
-//            print(error)
-//        }
 
     }
     
