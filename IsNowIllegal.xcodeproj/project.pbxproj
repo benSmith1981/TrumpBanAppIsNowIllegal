@@ -19,6 +19,7 @@
 		6C6FDFA31E49BED7003A295E /* IsNowIllegalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FDFA21E49BED7003A295E /* IsNowIllegalUITests.swift */; };
 		90B7D61A1EE76A540089406E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B7D6191EE76A540089406E /* share.png */; };
 		90B7D61C1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B7D61B1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png */; };
+		90B7D61F1EE77A010089406E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D61D1EE778C30089406E /* SnapshotHelper.swift */; };
 		A1E3155788872EDE322AA182 /* Pods_IsNowIllegalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */; };
 		BE408D291EE224A5003D047E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE408D271EE224A5003D047E /* StartViewController.swift */; };
 		BE408D2A1EE224A5003D047E /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE408D281EE224A5003D047E /* Start.storyboard */; };
@@ -68,6 +69,7 @@
 		747E904DFBC06F60740A18D9 /* Pods-IsNowIllegalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		90B7D6191EE76A540089406E /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = ../../../Downloads/share.png; sourceTree = "<group>"; };
 		90B7D61B1EE76B1C0089406E /* share_button2-57f7d54e3df78c690f643260.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "share_button2-57f7d54e3df78c690f643260.png"; path = "../../../Downloads/share_button2-57f7d54e3df78c690f643260.png"; sourceTree = "<group>"; };
+		90B7D61D1EE778C30089406E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		AA87C068138AA59B74692300 /* Pods_IsNowIllegalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IsNowIllegalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F861C9D2D1E5F2AFF55B4 /* Pods-IsNowIllegalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IsNowIllegalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IsNowIllegalUITests/Pods-IsNowIllegalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE408D271EE224A5003D047E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		6C6FDFA11E49BED7003A295E /* IsNowIllegalUITests */ = {
 			isa = PBXGroup;
 			children = (
+				90B7D61D1EE778C30089406E /* SnapshotHelper.swift */,
 				6C6FDFA21E49BED7003A295E /* IsNowIllegalUITests.swift */,
 				6C6FDFA41E49BED7003A295E /* Info.plist */,
 			);
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C6FDFA31E49BED7003A295E /* IsNowIllegalUITests.swift in Sources */,
+				90B7D61F1EE77A010089406E /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
