@@ -6,30 +6,31 @@
 <p align="center"><img src="https://dl.dropboxusercontent.com/u/512759/MapleBacon.png" height="210"/></p>
 
 
-MapleBacon is a Swift image download and caching library.
+MapleBacon is a Swift image download and caching library. It is not currently in active development.
 
 ## Requirements
 
-- Swift 3
+- Swift 3.1
 - iOS 8.0+
 - Xcode 8.0+
 
 ## Installation
 
-The easiest way is either through [CocoaPods](http://cocoapods.org). Simply add the dependency to your `Podfile` and then `pod install`:
+The easiest way is either through [CocoaPods](http://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage). 
+
+For the CocoaPods option, simply add the dependency to your `Podfile`, then `pod install`:
 
 ```ruby
 pod 'MapleBacon'
 ```
 
-or [Carthage](https://github.com/Carthage/Carthage). Add the following to your `Cartfile` and then run `carthage update`:
+For the Carthage option, add the following to your `Cartfile`, then run `carthage update`:
 
 ```ogdl
 github "zalando/MapleBacon"
 ```
 
-
-If you don't like any of those options, you can add the dependency as a git submdoule:
+If you don't like either of those options, you can add the dependency as a git submodule:
 
 1. Add MapleBacon as a git submodule: open your project directory in the Terminal and `git submodule add https://github.com/zalando/MapleBacon.git`
 2. Open the resulting `MapleBacon` directory and drag the `Library/MapleBacon/MapleBacon.xcodeproj` file into your Xcode project
@@ -170,6 +171,14 @@ if let imageUrl = URL(string: "…") {
 
 Find out a bit more on how MapleBacon came to be on the [Zalando Tech Blog](http://tech.zalando.com/posts/maple-bacon.html)
 
-## Licence
+## License
+ 
+The MIT License (MIT)
 
-MapleBacon is released under the MIT license. See LICENSE for details
+Copyright (c) 2015 Zalando SE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

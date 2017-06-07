@@ -23,6 +23,11 @@ platform :ios do
     upload
   end
   
+  lane :build_and_upload do
+    build
+    upload
+  end
+  
   desc "Take screenshots"
   lane :screenshot do
     snapshot(scheme: "IsNowIllegal") 
@@ -42,32 +47,30 @@ platform :ios do
     )
     
     # cert to create a new private key and signing request, download and install the generated certificate and import all generated files in your keychain.
-    cert
     cert(
       username: "funkymonkey1981@hotmail.com",
       team_id: "CWK29L7ZPT"
     ) 
     
     # generate a provisioning profile. By specifying force: true, a new provisioning profile is created on each run; this ensures you’re always using the correct code signing certificate.
-#     sigh(
-#     	username: "funkymonkey1981@hotmail.com",
-#      	team_id: "CWK29L7ZPT",
-#       	app_identifier: "com.BenSmithInc.TrumpBanApp"
-#     	force: true
-#     )
+    sigh(
+    	username: "funkymonkey1981@hotmail.com"
+    )
   end
   
   desc "Upload to App Store"
   lane :upload do
-    deliver(force: true)
+    deliver(force: true),
+    username: "funkymonkey1981@hotmail.com",
+    app_identifier: "com.BenSmithInc.TrumpBanApp",
+	itc_team_name: "Ben Smith|98555035",
   end
   
   desc "Create ipa"
   lane :build do
     increment_build_number
     gym(
-        scheme: "IsNowIllegal",
-    	export_team_id: "CWK29L7ZPT"
+        scheme: "IsNowIllegal"
     ) 
     # Build your app - more options available
 

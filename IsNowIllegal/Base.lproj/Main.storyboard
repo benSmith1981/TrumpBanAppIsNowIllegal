@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="adBannerView" destination="PSz-bZ-mgW" id="C6X-sp-DzO"/>
+                        <outlet property="creditsLabelOutlet" destination="NXJ-hs-7ae" id="exM-ff-xHg"/>
                         <outlet property="illegalizeButton" destination="enU-bR-lHQ" id="3tr-4s-1iy"/>
                         <outlet property="ownView" destination="8bC-Xf-vdC" id="Hg8-MU-qxo"/>
                         <outlet property="resultMeme" destination="ztm-PB-Qdo" id="eC5-jt-Q9h"/>

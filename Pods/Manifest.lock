@@ -1,44 +1,18 @@
 PODS:
-  - Alamofire (4.3.0)
-  - Firebase/AdMob (4.0.0):
-    - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.20.0)
-  - Firebase/Core (4.0.0):
-    - FirebaseAnalytics (= 4.0.0)
-    - FirebaseCore (= 4.0.0)
-  - FirebaseAnalytics (4.0.0):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (4.0.0):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseInstanceID (2.0.0):
-    - FirebaseCore (~> 4.0)
-  - Google-Mobile-Ads-SDK (7.20.0)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - MapleBacon (3.0.1)
+  - Alamofire (4.4.0)
+  - MapleBacon (3.1.0)
   - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
-  - Firebase/AdMob
-  - Firebase/Core
   - MapleBacon
   - MBProgressHUD (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  Firebase: 284eea779b73fdff309791817da7c68bff8dd572
-  FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
-  FirebaseCore: 85ad466044c2f013cdb167f85d426d15b128114a
-  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
-  Google-Mobile-Ads-SDK: 168312cdc167fa22746d4ea8e839fc4825dd2966
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  MapleBacon: 8fb0c45a0f147049ad49af6b36ac04a649baa74d
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  MapleBacon: 03b7a3d61409f8ae286ead261590e4a650754b09
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: c4d9bf3d43fe6da59422fd2d8e2d894403cb987f
+PODFILE CHECKSUM: ee92d8036a59870ca48e03ff64bf5fc34ff47fe0
 
 COCOAPODS: 1.2.1

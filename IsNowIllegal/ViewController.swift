@@ -11,7 +11,7 @@ import UIKit
 import MapleBacon
 import Alamofire
 import MBProgressHUD
-import Firebase
+import GoogleMobileAds
 
 class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     @IBOutlet weak var textBox: UITextField!
