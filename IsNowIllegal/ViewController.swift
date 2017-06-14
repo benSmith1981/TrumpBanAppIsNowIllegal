@@ -146,7 +146,7 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
     }
 
     @IBAction func shareFestival(_ sender: UIButton) {
-        guard let url = NSURL(string: (self.gifObj?.url)!) else {
+        guard let urlString = self.gifObj?.url , let url = NSURL(string: urlString) else {
             return
         }
         if let title: String = self.enteredText {
