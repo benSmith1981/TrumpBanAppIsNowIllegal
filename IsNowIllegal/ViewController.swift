@@ -45,8 +45,18 @@ class ViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelega
         adBannerView?.load(request)
 
         textBox.font = UIFont(name: "Trumpit", size: 20)!
+        
         titleLabelOutlet.font = UIFont(name: "Trumpit", size: 20)!
-        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 20)!
+        titleLabelOutlet.backgroundColor = UIColor.white
+        titleLabelOutlet.alpha = 0.8
+        titleLabelOutlet.layer.masksToBounds = true
+        titleLabelOutlet.clipsToBounds = true
+        titleLabelOutlet.layer.cornerRadius = 20
+        
+        illegalizeButton.titleLabel?.font = UIFont(name: "Trumpit", size: 18)!
+        illegalizeButton.layer.masksToBounds = true
+        illegalizeButton.clipsToBounds = true
+        illegalizeButton.layer.cornerRadius = 5
         
         shareButtonOutlet.layer.masksToBounds = true
         shareButtonOutlet.clipsToBounds = true

@@ -263,7 +263,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Maya Lekova";
+				ORGANIZATIONNAME = "Ben Smith";
 				TargetAttributes = {
 					6C6FDF7E1E49BED7003A295E = {
 						CreatedOnToolsVersion = 8.2.1;
